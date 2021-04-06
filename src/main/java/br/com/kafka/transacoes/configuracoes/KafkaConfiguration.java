@@ -1,4 +1,4 @@
-package br.com.kafka.transacoes.kafka;
+package br.com.kafka.transacoes.configuracoes;
 
 import br.com.kafka.transacoes.transacao.TransacaoRequest;
 import org.apache.kafka.clients.consumer.ConsumerConfig;

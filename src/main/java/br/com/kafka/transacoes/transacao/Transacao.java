@@ -22,7 +22,7 @@ public class Transacao {
     @OneToOne(cascade = CascadeType.MERGE)
     private Cartao cartao;
 
-    private LocalDateTime efetivadaEm;
+    private String efetivadaEm;
 
     @Deprecated
     public Transacao() {
@@ -33,7 +33,7 @@ public class Transacao {
             BigDecimal valor,
             Estabelecimento estabelecimento,
             Cartao cartao,
-            LocalDateTime efetivadaEm) {
+            String efetivadaEm) {
         this.id = id;
         this.valor = valor;
         this.estabelecimento = estabelecimento;
@@ -57,7 +57,7 @@ public class Transacao {
         return cartao;
     }
 
-    public LocalDateTime getEfetivadaEm() {
+    public String getEfetivadaEm() {
         return efetivadaEm;
     }
 }
