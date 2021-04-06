@@ -28,6 +28,6 @@ public class ListenerDeTransacao {
             logger.error("Aconteceu uma erro ao gravar os dados:{}",e.getMessage());
         }
 
-        logger.info("Dados Salvos com sucesso: {}",request.getEfetivadaEm());
+        logger.info("Dados Salvos com sucesso: {}",request.getEstabelecimento());
     }
 }
