@@ -1,34 +1,23 @@
-package br.com.kafka.transacoes.transacao;
+package br.com.kafka.transacoes.registroTransacao;
 
-import br.com.kafka.transacoes.cartao.Cartao;
-import br.com.kafka.transacoes.estabelecimento.Estabelecimento;
+import br.com.kafka.transacoes.registroCartao.Cartao;
+import br.com.kafka.transacoes.registroEstabelecimento.Estabelecimento;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
-@Entity
-public class Transacao {
+public class TransacaoRequest {
 
-    @Id
     private String id;
-
     private BigDecimal valor;
-    @OneToOne(cascade = CascadeType.MERGE)
     private Estabelecimento estabelecimento;
-    @OneToOne(cascade = CascadeType.MERGE)
     private Cartao cartao;
-
     private String efetivadaEm;
 
     @Deprecated
-    public Transacao() {
+    public TransacaoRequest() {
     }
 
-    public Transacao(
+    public TransacaoRequest(
             String id,
             BigDecimal valor,
             Estabelecimento estabelecimento,
@@ -59,5 +48,9 @@ public class Transacao {
 
     public String getEfetivadaEm() {
         return efetivadaEm;
+    }
+
+    public Transacao toModel() {
+        return new Transacao(id,valor,estabelecimento,cartao,efetivadaEm);
     }
 }

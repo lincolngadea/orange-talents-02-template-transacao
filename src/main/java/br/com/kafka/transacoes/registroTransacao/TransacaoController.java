@@ -1,6 +1,6 @@
-package br.com.kafka.transacoes.transacao;
+package br.com.kafka.transacoes.registroTransacao;
 
-import br.com.kafka.transacoes.configuracoes.log.Logback;
+import br.com.kafka.transacoes.configuracao.log.Logback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

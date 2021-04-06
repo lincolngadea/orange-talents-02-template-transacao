@@ -1,4 +1,4 @@
-package br.com.kafka.transacoes.configuracoes.log;
+package br.com.kafka.transacoes.configuracao.log;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

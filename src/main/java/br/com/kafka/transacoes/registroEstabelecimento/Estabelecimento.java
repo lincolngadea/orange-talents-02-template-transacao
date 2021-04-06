@@ -1,4 +1,4 @@
-package br.com.kafka.transacoes.estabelecimento;
+package br.com.kafka.transacoes.registroEstabelecimento;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
